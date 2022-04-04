@@ -25,6 +25,12 @@ public class CollegeController {
 	@Autowired
 	CollegeService collegeService;
 	
+	@GetMapping("/hello")
+	public ResponseEntity<String> showHello()
+	{
+		return new ResponseEntity<>("Hello Every Thing is Ok",HttpStatus.OK);
+	}
+	
 	@GetMapping()
 	public ResponseEntity<List<College>> showAll()
 	{
